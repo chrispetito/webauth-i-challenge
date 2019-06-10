@@ -5,5 +5,5 @@ module.exports = {
 }
 
 function find() {
-    db('users').select('id', 'username', 'password')
+  return  db('users').select('id', 'username', 'password')
 }
