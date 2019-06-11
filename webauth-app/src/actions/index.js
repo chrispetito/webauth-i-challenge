@@ -9,9 +9,7 @@ export const login = creds => dispatch => {
     return axios
     .post(`http://localhost:4000/api/auth/login`, creds)
     .then(res => {
-        localStorage.setItem('token', res.data.token)
-        localStorage.setItem('user id', res.data.id)
-        dispatch({ type: LOGIN_SUCCESS, payload: res.data.token})
+        dispatch({ type: LOGIN_SUCCESS, payload: res.data})
     })
     .catch(err => {
         console.log(err)
